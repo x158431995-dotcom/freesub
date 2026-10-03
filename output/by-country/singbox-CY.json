@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe",
+      "server": "45.149.114.171",
+      "server_port": 777,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe",
       "server": "194.76.154.31",
       "server_port": 40443,
       "uuid": "9f0baff8-bdee-4de9-9515-bcc4932b41fa",
@@ -25,31 +33,31 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe",
-      "server": "171.22.132.11",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe",
+      "server": "cdn.bulkavpn.top",
       "server_port": 443,
-      "uuid": "c39285e7-3c0b-4590-99dd-61d471dad685",
+      "uuid": "91d734be-a3d0-4d50-83ab-74cf7b6966fa",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "gemini.google.com",
+        "server_name": "cdn.bulkavpn.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "m-eRDflVxLTh9Tq4TKnX5Q1pJeEQJ0jsdvMF_71oIQ4",
-          "short_id": "67d02143a3c23463"
+          "public_key": "bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU",
+          "short_id": "94f32cfc"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe",
-      "server": "5.253.28.224",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe",
+      "server": "5.253.42.164",
       "server_port": 40443,
-      "uuid": "af5eac96-e478-488a-bc8c-45269d7e8847",
+      "uuid": "e99ba96d-dec8-42eb-be53-19e71eef7cab",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -67,8 +75,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe",
-      "server": "5.253.28.240",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 05 - xiaohe",
+      "server": "hydra.yokkastars.com",
       "server_port": 2443,
       "uuid": "5e679ccd-1586-4d5f-b87b-48251046cad8",
       "tls": {
@@ -91,8 +99,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 05 - xiaohe",
-      "server": "5.253.28.240",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 06 - xiaohe",
+      "server": "hydra.yokkastars.com",
       "server_port": 40443,
       "uuid": "405b964e-a2d2-454f-aaaa-711cc218897c",
       "flow": "xtls-rprx-vision",
@@ -101,33 +109,12 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
           "public_key": "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0",
           "short_id": "88b6"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 06 - xiaohe",
-      "server": "india.letsconnectpoint.com",
-      "server_port": 443,
-      "uuid": "914f3806-07a1-4158-9624-e183de065a38",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "india.letsconnectpoint.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0",
-          "short_id": "c1e3d5d4"
         }
       }
     },

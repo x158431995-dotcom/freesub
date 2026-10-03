@@ -5,22 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe",
-      "server": "185.143.179.179",
-      "server_port": 25026,
-      "uuid": "441a29b2-d9aa-47d5-9209-0a9191479f9f",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇩🇪 德国 (Germany) 01 (家宽) - xiaohe",
+      "server": "209.38.238.229",
+      "server_port": 20202,
+      "uuid": "d18c6897-2849-456a-8c46-d7ecece47c20",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
+        "server_name": "wzs.echo.net.eu.org",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "RVh0D446O5pKnOqlNkJNxSGGbmzl8swn4YBXYce1HSw",
-          "short_id": "34c465417d7ebca0"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlZXSwcZUQABSgMNQRoaSVhfRhoOChkDDUs=",
+        "headers": {
+          "Host": "wzs.echo.net.eu.org"
         }
       }
     },
@@ -29,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe"
+        "🇩🇪 德国 (Germany) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe"
+        "🇩🇪 德国 (Germany) 01 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,29 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
-  server: 154.84.56.198
+  server: 45.205.27.78
+  port: 10443
+  udp: true
+  type: trojan
+  password: 2eb7b354-0b05-493b-924b-508d464562ed
+  sni: 45.205.27.78
+  skip-cert-verify: true
+- name: 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
+  server: 45.207.207.25
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C
+- name: 🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe
+  server: 144.31.50.236
   port: 443
   udp: true
   type: vless
-  uuid: 9c44b1db-9b38-4d77-adec-7f549c1770a9
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: EHQEopoNqm2q8R2uu8ffAIpI-k2q-9Z5RUWafETWVGs
-    short-id: b7e4a1c9d3f60528
-  servername: www.universityofcalifornia.edu
-  client-fingerprint: firefox
-- name: 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
-  server: 162.159.45.19
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
+  servername: yandex.ru
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -35,6 +39,7 @@ proxy-groups:
   - AUTO
   - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
   - 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
+  - 🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -42,5 +47,6 @@ proxy-groups:
   proxies:
   - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
   - 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
+  - 🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -4,56 +4,120 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
-  server: 162.159.24.131
-  port: 2052
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  server: 3f86f2b4-tmm5c0-tpaqgu-1smhu.hk3.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 62f2374c-891b-11ef-a3f6-f23c9164ca5d
+  sni: 3f86f2b4-tmm5c0-tpaqgu-1smhu.hk3.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  server: 118.167.235.241
+  port: 24215
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
   server: 178.83.46.216
   port: 2053
   udp: true
   type: vless
   uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  server: 44577f17-tm96o0-tne5x4-1rfon.nw4.hyhuawei.com
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  server: ttww11.bpca2026.top
   port: 443
   udp: true
-  type: hysteria2
-  password: aed1cc24-351d-11ef-ba52-f23c9164ca5d
-  sni: 44577f17-tm96o0-tne5x4-1rfon.nw4.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 04 (家宽) - xiaohe
-  server: s3.huhiuh.space
-  port: 18642
-  udp: true
-  type: hysteria2
-  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
-  sni: www.bing.com
+  type: trojan
+  password: 9efd3f19-c7cb-4fa9-8d66-0598043597dc
+  sni: ttww11.bpca2026.top
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /images
+- name: 🇩🇪 德国 (Germany) 05 (家宽) - xiaohe
+  server: 209.38.238.229
+  port: 20202
+  udp: true
+  type: vless
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  tls: true
+  servername: wzs.echo.net.eu.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlZXSwcZUQABSgMNQRoaSVhfRhoOChkDDUs=
+    headers:
+      Host: wzs.echo.net.eu.org
+- name: 🇺🇸 美国 (United States) 06 (家宽) - xiaohe
+  server: 69.63.221.116
+  port: 25517
+  udp: true
+  type: vless
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  tls: true
+  servername: wzs.echo.net.eu.org
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HBRETS1lYDldeEEFRGxhbVloPHhpEVl9AFwxSGQ9bSQ==
+    headers:
+      Host: wzs.echo.net.eu.org
+- name: 🇭🇰 中国香港 (Hong Kong) 07 (移动家宽) - xiaohe
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16115
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇯🇵 日本 (Japan) 08 (家宽) - xiaohe
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: 7f99dcea-d6fa-45d5-aae9-11edad31364b
+  tls: true
+  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 05 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 06 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 (移动家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 08 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 05 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 06 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 (移动家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 08 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
